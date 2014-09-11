@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <script type="text/javascript" src="jquery-latest.js"></script> 
+            <script type="text/javascript" src="jquery.tablesorter.js"></script> 
+            <script>
+                  $(document).ready(function(){$("#myTable").tablesorter({headers:{7:{sorter:false},3:{sorter:false}}});}); 
+                  var info = {
+                        "bt":"BT Necessary ye contented newspaper zealously breakfast he prevailed. Melancholy middletons yet understood decisively boy law she.",
+                        "virgin":"Virgin At every tiled on ye defer do. No attention suspected oh difficult. Fond his say old meet cold find come whom.",
+                        "talktalk":"Talktalk Piqued favour stairs it enable exeter as seeing. Remainder met improving but engrossed sincerity age.",
+                        "plusnet":"Plustnet He do subjects prepared bachelor juvenile ye oh. He feelings removing informed he as ignorant we prepared."
+                  }
+                  var added = [];
+                  function insert(provider){
+                        var id = provider + "row";
+                        var table=document.getElementById("myTable");
+                        var pos = document.getElementById(id).rowIndex;
+                        var buttonId = "#" + provider + "button";
+                        var text = $(buttonId).text();
+                        if(text == "View Info"){
+                              var row=table.insertRow(pos+1);
+                              for(i in added){
+                                    if(added[i] > pos+1){added[i]++;}
+                              }
+                              added.push(pos+1);
+                              var cell1=row.insertCell(0);
+                              cell1.innerHTML = info[provider];
+                              table.rows[pos+1].cells[0].colSpan = 8;
+                              $(buttonId).html("Hide Info");
+                        } else {
+                              $(buttonId).html("View Info");
+                              table.deleteRow(pos+1);
+                              added.splice(added.indexOf(pos+1),1);
+                              for(i in added){
+                                    if(added[i] > pos+1){added[i]--;}
+                              }
+                        }
+                  }
+                  function reset(){
+                        var table=document.getElementById("myTable");
+                        added.sort(function(a,b){return b-a});
+                        for(i in added){
+                              table.deleteRow(added[i]);
+                        }
+                        added = [];
+                        $("#btbutton").html("View Info");
+                        $("#virginbutton").html("View Info");
+                        $("#talktalkbutton").html("View Info");
+                        $("#plusnetbutton").html("View Info");
+                  }
+            </script>
+            <style>
+                  body{
+                        font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+                  }
+                  button{
+                        background:none!important;
+                        border:none; 
+                        padding:0!important;
+                        color:#069;
+                        text-decoration:underline;
+                        cursor:pointer;
+                  }
+                  table,td{
+                        padding: 10px;
+                        color: grey;
+                  }
+                  table{
+                        border-spacing: 2px;
+                        border-collapse: collapse;
+                  }
+                  tr:hover td{
+                        background:#f0f0dd;
+                  }
+                  td{
+                        text-align: center;
+                         border:1px solid grey;
+                        background-color: #F8F8F0;
+                  }
+                  th{
+                        padding: 10px;
+                        width: 160px;
+                        text-align: left;
+                        border: 1px white solid;
+                        background-color: #333;
+                        color: #FFF;
+                  }
+                  .sortable{
+                        cursor: pointer;
+                        background-image: url(bg.png);
+                        background-repeat: no-repeat;
+                        background-position: center right;
+                  }
+                  .invis{
+                        display: none;
+                  }
+                  .headerSortUp {
+                        background-image: url(asc.png);
+                  }
+                  .headerSortDown {
+                        background-image: url(desc.png);
+                  }
+            </style>
+      </head>
+      <body>
+            <table id="myTable" class="tablesorter"> 
+                  <thead> 
+                        <tr> 
+                              <th class="sortable" onClick="reset()">Provider</th> 
+                              <th class="sortable" onClick="reset()">1st Year Cost</th> 
+                              <th class="sortable" onClick="reset()">Monthly Cost</th> 
+                              <th>What's Included</th> 
+                              <th class="sortable" onClick="reset()">Speed</th> 
+                              <th class="sortable" onClick="reset()">Monthly Usage Limit</th> 
+                              <th class="sortable" onClick="reset()">Contract Length</th> 
+                              <th></th>
+                        </tr> 
+                  </thead> 
+                  <tbody> 
+                        <tr id="btrow"> 
+                              <td>BT</td>
+                              <td>&pound;413.40</td>
+                              <td>&pound;34.45</td>
+                              <td>Free weekend calls</td>
+                              <td>38Mb (4.75MB)</td>
+                              <td>Unlimited</td>
+                              <td>9 Months</td>
+                              <td><button id="btbutton" onclick="insert('bt')">View Info</button></td>
+                        </tr> 
+                        <tr id="virginrow"> 
+                              <td>Virgin</td>
+                              <td>&pound;353.88</td>
+                              <td>&pound;29.49</td>
+                              <td>Call to your nan</td>
+                              <td>60Mb (7.5MB)</td>
+                              <td>Unlimited</td>
+                              <td>9 Months</td>
+                              <td><button id="virginbutton" onclick="insert('virgin')">View Info</button></td>
+                        </tr> 
+                        <tr id="talktalkrow"> 
+                              <td>TalkTalk</td>
+                              <td>&pound;102.96</td>
+                              <td>&pound;8.58</td>
+                              <td>Three asda orders</td>
+                              <td>25Mb (3MB)</td>
+                              <td>40GB</td>
+                              <td>12 Months</td>
+                              <td><button id="talktalkbutton" onclick="insert('talktalk')">View Info</button></td>
+                        </tr> 
+                        <tr id="plusnetrow"> 
+                              <td>PlusNet</td>
+                              <td>&pound;187.80</td>
+                              <td>&pound;15.65</td>
+                              <td>30 minutes sex line</td>
+                              <td>20Mb (2.4MB)</td>
+                              <td>20GB</td>
+                              <td>12 Months</td>
+                              <td><button id="plusnetbutton" onclick="insert('plusnet')">View Info</button></td>
+                        </tr> 
+                  </tbody> 
+            </table> 
+      </body>
+</html>
