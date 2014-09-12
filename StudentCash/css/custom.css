@@ -1,0 +1,277 @@
+body{
+	background: url(../images/background.png);
+	font-family: 'Helvetica';
+}
+
+header #logo a{
+	color:black;
+}
+
+header #logo a:hover{
+	color:black;
+	text-decoration: none;
+}
+
+header h1{
+	font-weight: 100;
+	font-size: 60px;
+	letter-spacing:-5px;
+	margin-bottom: 0;
+}
+
+header h1 span{
+	font-weight: 900;
+}
+
+header p{
+	font-weight: 100;
+	opacity: 0.8;
+	font-size: 22px;
+	letter-spacing: 0.5px;
+	padding-left: 3px;
+	margin-top: -8px;
+}
+
+header #search-form{
+	margin-top:25px;
+	margin-left: 55px;
+}
+
+header #search-form .input-group{
+	width:100%;
+}
+
+header #search-form .form-group{
+	width: 100%;
+}
+
+header #search-form .input-group input{
+	 width:100%;
+	 font-size:20px;
+	 height:40px
+}
+ 
+header form .input-group-addon{
+	background:rgb(81,79,70);
+	cursor:pointer;
+}
+
+header form .glyphicon-search {
+	color:white;
+	font-size:20px;
+}
+
+header .col-sm-5{
+	margin-top:25px;
+}
+
+header .dropdown .btn-group, header .dropdown .btn-group .btn{
+	width:100%;
+}
+
+header .dropdown .glyphicon-chevron-down{
+	padding-left:10px;
+}
+
+header .btn-group .btn{
+	font-size:14px;
+	background:rgb(247,247,247);
+	padding-right: 15px;
+	padding-top:15px;
+	padding-bottom: 15px;
+	text-transform: uppercase;
+	font-weight: 100;
+	border-radius: 0;
+}
+
+header .btn-group a.btn:hover{
+	background:rgb(240,240,240);
+	border-color: #ccc;
+}
+
+header .btn-group .btn span.glyphicon-flag{
+	padding-right: 9px;
+	
+}
+
+header .btn-group .btn span.li_bulb{
+	padding-right: 9px;
+}
+
+.clear{
+	clear:both;
+}
+
+.container{
+	width:930px;
+}
+
+.col-box{
+	height:300px;
+}
+
+.col-box img{
+	width:100%;
+	height:65%;
+	-webkit-box-shadow: 0px 0px 21px 8px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:0px 0px 21px 8px rgba(50, 50, 50, 0.2);
+	box-shadow:0px 0px 21px 8px rgba(50, 50, 50, 0.2);
+	background:url(../images/white.png);
+}
+
+.bnb .row{
+	margin-top: 10px;
+}
+
+.bnb .row .col-md-2{
+	padding:0;
+}
+
+.bnb .row .col-md-5:first-child{
+	padding-left:15px;
+	padding-right:0;
+}
+
+.bnb .row .col-md-5:last-child{
+	padding-left:0;
+	padding-right:15px;
+}
+
+.bnb button{
+	width:100%;
+	border:1px solid #bbb;
+	font-family: 'Helvetica';
+	font-weight: 900;
+    text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;  
+    opacity: 0.8;
+}
+
+.bnb button:focus{
+	outline: none;
+}
+
+.bnb .boom{
+	background:rgb(223,227,210);
+	border-radius:5px 0 0 5px;
+}
+
+.bnb .na{
+	background:rgb(227,210,216);
+}
+
+.bnb .buy{
+	background:rgb(238,238,238);
+	border-radius:0 5px 5px 0;
+}
+
+.top-col-price{
+	text-align:center;
+	font-size:28px;
+	font-family:'Helvetica';
+	font-weight: 200;
+	opacity:0.8;
+	margin-top:6px;
+}
+
+#top-3-col{
+	margin-top:40px;
+}
+
+.main-content{
+	color:rgb(126,126,126);
+	font-family: 'Helvetica';
+}
+
+.main-content .breadcrumb{
+	margin-top:40px;
+	background:none;
+	font-size:17px;
+	font-family:'Helvetica';
+	font-weight:300;
+	margin-bottom: 0;
+	opacity: 0.8;
+}
+
+.main-content .breadcrumb li a{
+	color:rgb(178,178,178);
+}
+
+.main-content .breadcrumb li.active{
+	color:rgb(178,178,178);
+}
+
+.breadcrumb>li+li:before{
+	content: ">\00a0";
+}
+
+.main-content hr{
+	margin-top:-5px;
+	margin-bottom: 20px;
+	border-top: 1px solid rgb(178,178,178);
+	opacity: 0.8;
+}
+
+.main-content h2{
+	padding-left:20px;
+	font-size: 33px;
+	margin-top:0;
+	font-family: 'Helvetica';
+}
+
+.main-content h2:first-child{
+	margin-top:5px;
+	font-weight: 400;
+}
+
+.main-content h2:nth-child(2){
+	font-weight: 100;
+	margin-top:-7px;
+}
+
+
+.main-content .bnb{
+	margin-top:20px;
+	width:80%;
+	margin-left:10%;
+}
+
+.main-content .bnb button{
+	height:40px;
+	color:#333;
+	font-size:20px;
+}
+
+.main-content .main-image img{
+	width:100%;
+	height:300px;
+	-webkit-box-shadow: 0px 0px 21px 8px rgba(50, 50, 50, 0.1);
+	-moz-box-shadow:0px 0px 21px 8px rgba(50, 50, 50, 0.1);
+	box-shadow:0px 0px 21px 8px rgba(50, 50, 50, 0.1);
+	background:url(../images/white.png);
+	margin-top:10px;
+}
+
+.main-price{
+	text-align:center;
+	font-size:36px;
+	font-family:'Helvetica';
+	font-weight: 200;
+	opacity:0.8;
+	color:#333;
+	margin-top:6px;
+}
+
+#banner{
+	width:100%;
+	height:12px;
+	background:rgb(81,79,70);
+}
+
+#banner-img{
+	float:right;
+	margin-top:-12px;
+}
