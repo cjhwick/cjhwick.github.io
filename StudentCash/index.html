@@ -15,6 +15,7 @@
     
     <!-- Custom JS -->
     <script src="js/custom.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -84,15 +85,16 @@
 	    				<div class="bnb">
 		    				<div class="row">
 					    		<div class="col-md-5">
-					    			  <button type="button" class="boom">Boom!</button>
+					    			  <button type="button" class="boom" onclick="popup(this,'boom');">Boom!</button>
 					    		</div> <!-- col-md-5 -->
 					    		<div class="col-md-2">
-					    			  <button type="button" class="na">Na!</button>
+					    			  <button type="button" class="na" onclick="popup(this,'na');">Na!</button>
 					    		</div><!-- col-md-2 -->
 					    		<div class="col-md-5">
-					    			  <button type="button" class="buy">Buy</button>
+					    			  <button type="button" class="buy" onclick="popup(this,'buy');">Buy</button>
 					    		</div><!-- col-md-5 -->
 		    				</div><!-- row -->
+		    				<div class="showThis"></div>
 	    				</div><!-- bnb -->
 	    				<p class="top-col-price">&pound;139.00</p>
 	    			</div><!-- col-box -->
@@ -103,15 +105,16 @@
 						<div class="bnb">
 		    				<div class="row">
 					    		<div class="col-md-5">
-					    			  <button type="button" class="boom">Boom!</button>
+					    			  <button type="button" class="boom" onclick="popup(this,'boom');">Boom!</button>
 					    		</div><!-- col-md-5 -->
 					    		<div class="col-md-2">
-					    			  <button type="button" class="na">Na!</button>
+					    			  <button type="button" class="na" onclick="popup(this,'na');">Na!</button>
 					    		</div><!-- col-md-2 -->
 					    		<div class="col-md-5">
-					    			  <button type="button" class="buy">Buy</button>
+					    			  <button type="button" class="buy" onclick="popup(this,'buy');">Buy</button>
 					    		</div><!-- col-md-5 -->
 		    				</div><!-- row -->
+		    				<div class="showThis"></div>
 	    				</div><!-- bnb -->
 	    				<p class="top-col-price">&pound;23.97</p>
 					</div><!-- col-box -->
@@ -122,15 +125,16 @@
 						<div class="bnb">
 		    				<div class="row">
 					    		<div class="col-md-5">
-					    			  <button type="button" class="boom">Boom!</button>
+					    			  <button type="button" class="boom" onclick="popup(this,'boom');">Boom!</button>
 					    		</div><!-- col-md-5 -->
 					    		<div class="col-md-2">
-					    			  <button type="button" class="na">Na!</button>
+					    			  <button type="button" class="na" onclick="popup(this,'na');">Na!</button>
 					    		</div><!-- col-md-2 -->
 					    		<div class="col-md-5">
-					    			  <button type="button" class="buy">Buy</button>
+					    			  <button type="button" class="buy" onclick="popup(this,'buy');">Buy</button>
 					    		</div><!-- col-md-5 -->
 		    				</div><!-- row -->
+		    				<div class="showThis"></div>
 	    				</div><!-- bnb -->
 	    				<p class="top-col-price">&pound;139.00</p>
 					</div><!-- col-box -->
@@ -155,21 +159,95 @@
 					<div class="bnb">
 		    				<div class="row">
 					    		<div class="col-md-5">
-					    			  <button type="button" class="boom">Boom!</button>
+					    			  <button type="button" class="boom" onclick="popup(this,'boom');">Boom!</button>
 					    		</div><!-- col-md-5 -->
 					    		<div class="col-md-2">
-					    			  <button type="button" class="na">Na!</button>
+					    			  <button type="button" class="na" onclick="popup(this,'na');">Na!</button>
 					    		</div><!-- col-md-2 -->
 					    		<div class="col-md-5">
-					    			  <button type="button" class="buy">Buy</button>
+					    			  <button type="button" class="buy" onclick="popup(this,'buy');">Buy</button>
 					    		</div><!-- col-md-5 -->
 		    				</div><!-- row -->
+		    				<div class="showThis">
+			    				<img src="images/na-arrow.png" alt="arrow">
+			    				<p class="popup-head">OK, so this wasn't any good, please tell us why</p>
+			    				<hr>
+			    				<form action="">
+			    					<div class="row">
+			    						<div class="col-md-5">
+											<input type="radio" name="sex" value="male">Cheaper elsewhere<br>
+											<input type="radio" name="sex" value="female">Rubbish deal
+			    						</div><!-- col-md-5 -->
+										<div class="col-md-2">
+											<input type="radio" name="sex" value="female">Expired<br>
+											<input type="radio" name="sex" value="male">Report
+										</div><!-- col-md-2 -->
+										<div class="col-md-5 pad">
+											<input type="radio" name="sex" value="male">Rubbish seller<br>
+											<input class="btn btn-default"type="submit" value="Submit">
+										</div><!-- col-md-5 -->
+			    					</div><!-- row -->
+								</form>
+			    				
+		    				</div>
 	    				</div><!-- bnb -->
+	    				<div class="main-text">
+	    					<p>You have to hold iPad Air to believe it. It’s just 7.5 millimetres thin and weighs less than half a kilo. The stunning Retina display sits inside thinner bezels, so all you see is your content. And an incredible amount of power lies inside the sleek enclosure. So you can do so much more. With so much less.</p>
+
+<p>The new A7 chip in iPad Air was designed with 64-bit architecture. It delivers killer performance — up to two times faster CPU and graphics performance than its predecessor — without sacrificing battery life. So you get incredible power in a device you can take with you wherever you go. </p>
+
+<p>iPad Air keeps you connected faster than ever. In more locations than ever. Using two antennas instead of one and MIMO technology, iPad Air delivers up to twice the Wi‑Fi performance of its predecessor. And the Wi‑Fi + Cellular model supports more networks than ever, so you can make quick, easy connections the world over.</p>
+	    				</div><!-- main-text -->
 				</div><!-- col-md-7 -->
 				<div class="col-md-5">
 					<div class="main-image">
 						<img src="images/overlay.png" alt="main-image">
 						<p class="main-price">&pound;139.00</p>
+						<p class="graphHead"></p>
+						<canvas id="graphCanvas"></canvas>
+						<script>
+					      var canvas = document.getElementById('graphCanvas');
+					      var context = canvas.getContext('2d');
+					
+					      context.beginPath();
+					      context.moveTo(0, 100);
+					      context.lineTo(20, 100);
+					      
+					      context.moveTo(20, 100);
+					      context.lineTo(30, 10);
+					      
+					      context.moveTo(30, 10);
+					      context.lineTo(40, 100);
+					      
+					      context.moveTo(40, 100);
+					      context.lineTo(50, 100);
+					      
+					      context.moveTo(50, 100);
+					      context.lineTo(55, 10);
+					      
+					      context.moveTo(55, 10);
+					      context.lineTo(60, 10);
+					      
+					      context.moveTo(60, 10);
+					      context.lineTo(65, 100);
+					      
+					      context.moveTo(65, 100);
+					      context.lineTo(140, 100);
+					      
+					      context.moveTo(140, 100);
+					      context.lineTo(145, 10);
+					      
+					      context.moveTo(145, 10);
+					      context.lineTo(160, 10);
+					      
+					      context.moveTo(160, 10);
+					      context.lineTo(170, 100);
+					      
+					      context.moveTo(170, 100);
+					      context.lineTo(240, 100);
+					      
+					      context.stroke();
+					    </script>
 					</div><!-- main-image -->
 				</div><!-- col-md-5 -->
 			</div><!-- row -->
