@@ -6,7 +6,7 @@ function popup(button,type){
 		case 'boom':
 			color = 'rgb(223,227,210)';
 			src = 'images/boom-arrow.png';
-			left = '16.5%';
+			left = '18.5%';
 			break;
 		case 'na':
 			color = 'rgb(227,210,216)';
