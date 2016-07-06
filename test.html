@@ -1,0 +1,346 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+$(function() {
+
+	$('#start').click(function(){
+		var val = $('#result').val();
+		if(!(/[0-9]{2}.[0-9]{2}/g).test(val)){	
+			alert('Invalid number');
+			return;
+		}
+		var attrs = [-400,-600,-800,-1000,-1200,-1400,-1600,-1800,-2000,-2200];
+		var parts = val.split('.');
+		var mantissa = parts[1];
+		var metaphor = parts[0];
+		$('#roller1').addClass('roulette_animate'+metaphor.substr(0,1));
+		$('#roller2').addClass('roulette_animate'+metaphor.substr(1,1));
+		$('#roller3').addClass('roulette_animate'+mantissa.substr(0,1));
+		$('#roller4').addClass('roulette_animate'+mantissa.substr(1,1));
+	});
+	
+	$('#reset').click(function(){
+		$('#roller1').removeClass('roulette_animate1 roulette_animate2 roulette_animate3 roulette_animate4 roulette_animate5 roulette_animate6 roulette_animate7 roulette_animate8 roulette_animate9');
+		$('#roller2').removeClass('roulette_animate1 roulette_animate2 roulette_animate3 roulette_animate4 roulette_animate5 roulette_animate6 roulette_animate7 roulette_animate8 roulette_animate9');
+		$('#roller3').removeClass('roulette_animate1 roulette_animate2 roulette_animate3 roulette_animate4 roulette_animate5 roulette_animate6 roulette_animate7 roulette_animate8 roulette_animate9');
+		$('#roller4').removeClass('roulette_animate1 roulette_animate2 roulette_animate3 roulette_animate4 roulette_animate5 roulette_animate6 roulette_animate7 roulette_animate8 roulette_animate9');
+	});
+});	
+
+</script>
+<link href='https://fonts.googleapis.com/css?family=Orbitron:400,900' rel='stylesheet' type='text/css'>
+<style>
+body{
+	background:beige;
+	padding-top:300px;
+}
+.container{
+	width:800px;
+	height:200px;
+	margin:0 auto;
+	background:white;
+	border:1px solid #ccc;
+	overflow-y:hidden;
+}
+
+.roller{
+	height:2000px;
+	width:200px;
+	float:left;
+	position:relative;
+
+}
+
+.digit{
+	width:200px;
+	height:200px;
+	text-align:center;
+}
+
+.digit span{
+	font-size:159px;
+	font-family: 'Orbitron', sans-serif;
+	font-weight:400;
+}
+
+.point{
+	position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 100px;
+    left: 700px;
+    top: 377px;
+}
+
+.roulette_animate0 {
+	top:-400px;
+	animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-webkit-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-moz-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+}
+
+.roulette_animate1 {
+	top:-600px;
+	animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-webkit-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-moz-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+}
+
+.roulette_animate2 {
+	top:-800px;
+	animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-webkit-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-moz-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+}
+
+.roulette_animate3 {
+	top:-1000px;
+	animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-webkit-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-moz-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+}
+
+.roulette_animate4 {
+	top:-1200px;
+	animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-webkit-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-moz-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+}
+
+.roulette_animate5 {
+	top:-1400px;
+	animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-webkit-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-moz-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+}
+
+.roulette_animate6 {
+	top:-1600px;
+	animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-webkit-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-moz-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+}
+
+.roulette_animate7 {
+	top:-1800px;
+	animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-webkit-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-moz-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+}
+
+.roulette_animate8 {
+	top:-2000px;
+	animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-webkit-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-moz-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+}
+
+.roulette_animate9 {
+	top:-2200px;
+	animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-webkit-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-moz-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+}
+
+@keyframes roulette_animation {
+	100% {
+		transform: translate(0, -1600px);
+		-webkit-transform: translate(0, -1600px);
+		-moz-transform: translate(0, -1600px);
+	}
+}
+
+@-webkit-keyframes roulette_animation {
+	100% {
+		transform: translate(0, -1600px);
+		-webkit-transform: translate(0, -1600px);
+		-moz-transform: translate(0, -1600px);
+	}
+}
+
+@-moz-keyframes roulette_animation {
+	100% {
+		transform: translate(0, -1600px);
+		-webkit-transform: translate(0, -1600px);
+		-moz-transform: translate(0, -1600px);
+	}
+} {
+	animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-webkit-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+	-moz-animation: roulette_animation 8s cubic-bezier(.34,.87,.28,.99) 0s forwards;
+}
+
+@keyframes roulette_animation {
+	100% {
+		transform: translate(0, -1600px);
+		-webkit-transform: translate(0, -1600px);
+		-moz-transform: translate(0, -1600px);
+	}
+}
+
+@-webkit-keyframes roulette_animation {
+	100% {
+		transform: translate(0, -1600px);
+		-webkit-transform: translate(0, -1600px);
+		-moz-transform: translate(0, -1600px);
+	}
+}
+
+@-moz-keyframes roulette_animation {
+	100% {
+		transform: translate(0, -1600px);
+		-webkit-transform: translate(0, -1600px);
+		-moz-transform: translate(0, -1600px);
+	}
+}
+
+.form{
+	position:absolute;
+	left: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+	<div class="form">
+		<input type="text" id="result" placeholder="00.00">
+		<button id="start">Start</button>
+		<button id="reset">Reset</button>
+	</div>
+	<div class="roller" id="roller1">
+		<div class="digit"><span>0</span></div>
+		<div class="digit"><span>1</span></div>
+		<div class="digit"><span>2</span></div>
+		<div class="digit"><span>3</span></div>
+		<div class="digit"><span>4</span></div>
+		<div class="digit"><span>5</span></div>
+		<div class="digit"><span>6</span></div>
+		<div class="digit"><span>7</span></div>
+		<div class="digit"><span>8</span></div>
+		<div class="digit"><span>9</span></div>
+		<div class="digit"><span>0</span></div>
+		<div class="digit"><span>1</span></div>
+		<div class="digit"><span>2</span></div>
+		<div class="digit"><span>3</span></div>
+		<div class="digit"><span>4</span></div>
+		<div class="digit"><span>5</span></div>
+		<div class="digit"><span>6</span></div>
+		<div class="digit"><span>7</span></div>
+		<div class="digit"><span>8</span></div>
+		<div class="digit"><span>9</span></div>
+		<div class="digit"><span>0</span></div>
+		<div class="digit"><span>1</span></div>
+		<div class="digit"><span>2</span></div>
+		<div class="digit"><span>3</span></div>
+		<div class="digit"><span>4</span></div>
+		<div class="digit"><span>5</span></div>
+		<div class="digit"><span>6</span></div>
+		<div class="digit"><span>7</span></div>
+		<div class="digit"><span>8</span></div>
+		<div class="digit"><span>9</span></div>
+	</div>
+	<div class="roller" id="roller2">
+		<div class="digit"><span>0</span></div>
+		<div class="digit"><span>1</span></div>
+		<div class="digit"><span>2</span></div>
+		<div class="digit"><span>3</span></div>
+		<div class="digit"><span>4</span></div>
+		<div class="digit"><span>5</span></div>
+		<div class="digit"><span>6</span></div>
+		<div class="digit"><span>7</span></div>
+		<div class="digit"><span>8</span></div>
+		<div class="digit"><span>9</span></div>
+		<div class="digit"><span>0</span></div>
+		<div class="digit"><span>1</span></div>
+		<div class="digit"><span>2</span></div>
+		<div class="digit"><span>3</span></div>
+		<div class="digit"><span>4</span></div>
+		<div class="digit"><span>5</span></div>
+		<div class="digit"><span>6</span></div>
+		<div class="digit"><span>7</span></div>
+		<div class="digit"><span>8</span></div>
+		<div class="digit"><span>9</span></div>
+		<div class="digit"><span>0</span></div>
+		<div class="digit"><span>1</span></div>
+		<div class="digit"><span>2</span></div>
+		<div class="digit"><span>3</span></div>
+		<div class="digit"><span>4</span></div>
+		<div class="digit"><span>5</span></div>
+		<div class="digit"><span>6</span></div>
+		<div class="digit"><span>7</span></div>
+		<div class="digit"><span>8</span></div>
+		<div class="digit"><span>9</span></div>
+	</div>
+	<div class="roller" id="roller3">
+		<div class="digit"><span>0</span></div>
+		<div class="digit"><span>1</span></div>
+		<div class="digit"><span>2</span></div>
+		<div class="digit"><span>3</span></div>
+		<div class="digit"><span>4</span></div>
+		<div class="digit"><span>5</span></div>
+		<div class="digit"><span>6</span></div>
+		<div class="digit"><span>7</span></div>
+		<div class="digit"><span>8</span></div>
+		<div class="digit"><span>9</span></div>
+		<div class="digit"><span>0</span></div>
+		<div class="digit"><span>1</span></div>
+		<div class="digit"><span>2</span></div>
+		<div class="digit"><span>3</span></div>
+		<div class="digit"><span>4</span></div>
+		<div class="digit"><span>5</span></div>
+		<div class="digit"><span>6</span></div>
+		<div class="digit"><span>7</span></div>
+		<div class="digit"><span>8</span></div>
+		<div class="digit"><span>9</span></div>
+		<div class="digit"><span>0</span></div>
+		<div class="digit"><span>1</span></div>
+		<div class="digit"><span>2</span></div>
+		<div class="digit"><span>3</span></div>
+		<div class="digit"><span>4</span></div>
+		<div class="digit"><span>5</span></div>
+		<div class="digit"><span>6</span></div>
+		<div class="digit"><span>7</span></div>
+		<div class="digit"><span>8</span></div>
+		<div class="digit"><span>9</span></div>
+	</div>
+	<div class="roller" id="roller4">
+		<div class="digit"><span>0</span></div>
+		<div class="digit"><span>1</span></div>
+		<div class="digit"><span>2</span></div>
+		<div class="digit"><span>3</span></div>
+		<div class="digit"><span>4</span></div>
+		<div class="digit"><span>5</span></div>
+		<div class="digit"><span>6</span></div>
+		<div class="digit"><span>7</span></div>
+		<div class="digit"><span>8</span></div>
+		<div class="digit"><span>9</span></div>
+		<div class="digit"><span>0</span></div>
+		<div class="digit"><span>1</span></div>
+		<div class="digit"><span>2</span></div>
+		<div class="digit"><span>3</span></div>
+		<div class="digit"><span>4</span></div>
+		<div class="digit"><span>5</span></div>
+		<div class="digit"><span>6</span></div>
+		<div class="digit"><span>7</span></div>
+		<div class="digit"><span>8</span></div>
+		<div class="digit"><span>9</span></div>
+		<div class="digit"><span>0</span></div>
+		<div class="digit"><span>1</span></div>
+		<div class="digit"><span>2</span></div>
+		<div class="digit"><span>3</span></div>
+		<div class="digit"><span>4</span></div>
+		<div class="digit"><span>5</span></div>
+		<div class="digit"><span>6</span></div>
+		<div class="digit"><span>7</span></div>
+		<div class="digit"><span>8</span></div>
+		<div class="digit"><span>9</span></div>
+	</div>
+	<div class="point">
+		<span>.</span>
+	</div>
+</div>
+
+</body>
+</html>
